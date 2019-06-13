@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block head %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="{{ config.developerPortalUri }}/logo/phantauth-shared.png" />
+  <meta name="theme-color" content="#fff0e2"/>
+  <title>PhantAuth Shared</title>
+  <link rel="stylesheet" href="{{ config.developerPortalUri }}/bootstrap-phantauth.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ config.developerPortalUri }}/phantauth.css" crossorigin="anonymous"/>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rivets/0.9.6/rivets.bundled.min.js"></script>
+  {% endblock %}
+</head>
+<body>
+  {% block body %}
+  <div class="sandbox bg-warning text-center" role="alert" aria-live="assertive" aria-atomic="true" style="display:none;">
+    <div class="small">You are viewing the PhantAuth <b>Sandbox</b>!</div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="/"><img src="{{ config.developerPortalUri }}/logo/phantauth-shared.svg"> PhantAuth Shared</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ config.developerPortalUri }}">Developer</a>
+        </li>
+      </ul>
+    </div>    
+  </nav>
+  <div class="container-fluid">
+    {% block content %}
+    {% endblock %}
+  </div>
+  {% endblock %}
+  <script type="text/javascript">
+    $(function() {
+       if ( ! window.location.hostname.endsWith('.me')) {
+         $(".sandbox").show()
+       }
+    });
+  </script>
+  <script src="https://embed.small.chat/THA6J1QSJGH31C4J9F.js" async></script>
+</body>
+</html>

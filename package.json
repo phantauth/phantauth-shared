@@ -1,0 +1,16 @@
+{
+  "name": "phantauth-tenant",
+  "version": "1.0.0",
+  "description": "PhantAuth Tenant",
+  "scripts": {
+    "build": "eleventy"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phantauth/phantauth-tenant.git"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.7.1"
+  }
+}
