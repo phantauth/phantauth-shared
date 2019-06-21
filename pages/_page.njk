@@ -16,9 +16,11 @@
 </head>
 <body>
   {% block body %}
-  <div class="sandbox bg-warning text-center" role="alert" aria-live="assertive" aria-atomic="true" style="display:none;">
+  {% if config.domain != "phantauth.net"  %}
+  <div class="sandbox bg-warning text-center" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="small">You are viewing the PhantAuth <b>Sandbox</b>!</div>
   </div>
+  {% endif %}
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <a class="navbar-brand" href="/"><img src="{{ config.developerPortalUri }}/logo/phantauth-shared.svg"> PhantAuth Shared</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
